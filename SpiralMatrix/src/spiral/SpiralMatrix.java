@@ -74,7 +74,6 @@ public class SpiralMatrix {
 	}
 
 	private int[] down(int[][] t, int n, int m) {
-		//if (t[n][m] != 0);
 		if (n < this.n && t[n][m] == 0) {
 			t[n][m] = t[n - 1][m] + 1;
 			return down(t, n + 1, m);
@@ -83,5 +82,4 @@ public class SpiralMatrix {
 		this.m--;
 		return new int[] { n, m };
 	}
-
 }
