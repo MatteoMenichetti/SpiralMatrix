@@ -22,8 +22,6 @@ public class SpiralMatrixTests {
 		sm = new SpiralMatrix(4);
 		m = sm.calculate();
 		t = new int[][] { { 1, 2, 3, 4 }, { 12, 13, 14, 5 }, { 11, 16, 15, 6 }, { 10, 9, 8, 7 } };
-		// assertTrue(m[0].length == t[0].length && m.length == t.length && cycle(m,
-		// t));
 		assertTrue(m[0].length == t[0].length);
 		assertTrue(m.length == t.length);
 		assertTrue(cycle(m, t));
