@@ -9,10 +9,6 @@ public class SpiralMatrix {
 		this.n = n;
 		this.m = m;
 	}
-
-	/*
-	 * 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-	 */
 	public SpiralMatrix(int n) {
 		this.m = this.n = n;
 	}
@@ -32,7 +28,7 @@ public class SpiralMatrix {
 				if (t.length > 2) {
 					p = up(t, p[0] - 1, p[1]);
 					if (p[0] > 0 && p[0] < t[0].length - 1 && p[1] < t.length - 1) {
-						/* guardare */if (t[p[0]][p[1]] == 0)
+						if (t[p[0]][p[1]] == 0)
 							build(t, p[0], p[1]);
 					}
 				}
@@ -78,8 +74,7 @@ public class SpiralMatrix {
 	}
 
 	private int[] down(int[][] t, int n, int m) {
-		if (t[n][m] != 0)
-			;
+		//if (t[n][m] != 0);
 		if (n < this.n && t[n][m] == 0) {
 			t[n][m] = t[n - 1][m] + 1;
 			return down(t, n + 1, m);
@@ -88,4 +83,5 @@ public class SpiralMatrix {
 		this.m--;
 		return new int[] { n, m };
 	}
+
 }
